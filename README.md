@@ -52,3 +52,7 @@ result_image = hough_lines.detect_and_draw_lines(img)
 plt.imshow(result_image, cmap='gray')
 plt.axis('off')
 plt.show()
+
+## Documentation
+
+The documentation for this project can be found in the `docs/_build/index.html` file. You can open this file in your web browser to view the detailed documentation, including usage instructions, API references, and examples.
