@@ -1,0 +1,9 @@
+[flake8]
+select = ANN,B,B9,BLK,C,D,DAR,E,F,I,S,W
+docstring-convention = google
+ignore = F401,I100,I201,B905,S113,B904,S101
+max-line-length = 100
+application-import-names = iitp_6_python,tests
+import-order-style = google
+per-file-ignores =
+    noxfile.py:ANN

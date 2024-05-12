@@ -1,0 +1,60 @@
+[tool.poetry]
+name = "iitp_6_python"
+version = "0.1.0"
+authors = ["Rushana Denisheva <denisheva.rr@phystech.edu>"]
+readme = "README.md"
+description = "iitp_6_python project"
+license = "MIPT"
+homepage = "https://github.com/cucumparty/iitp_6_python"
+repository = "https://github.com/cucumparty/iitp_6_python"
+keywords = ["iitp_6_python"]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+click = "^8.0"
+requests = "^2.31.0"
+desert = "^2022.9.22"
+marshmallow = "^3.21.2"
+matplotlib = "^3.7"
+opencv-python = "^4.5.3"
+imageio = "^2.9.0"
+
+[tool.poetry.scripts]
+iitp-6-python = "iitp_6_python.console:main"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+coverage = "^7.5.1"
+pytest-cov = "^5.0.0"
+pytest-mock = "^3.14.0"
+black = "^24.4.2"
+flake8 = "^7.0.0"
+flake8-bandit = "^4.1.1"
+flake8-black = "^0.3.6"
+flake8-bugbear = "^24.4.26"
+flake8-import-order = "^0.18.2"
+safety = "^3.2.0"
+mypy = "^1.10.0"
+pytype = {version = "^2024.4.11", python = "3.8"}
+typeguard = "^4.2.1"
+flake8-annotations = "^3.1.0"
+flake8-docstrings = "^1.7.0"
+darglint = "^1.8.1"
+xdoctest = "^1.1.3"
+sphinx-autodoc-typehints = "2.0.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["iitp_6_python"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 10
