@@ -57,3 +57,30 @@ plt.show()
 ## Documentation
 
 The documentation for this project can be found in the `docs/_build/index.html` file. You can open this file in your web browser to view the detailed documentation, including usage instructions, API references, and examples.
+
+## Nox Sessions
+
+This project includes several [Nox](https://nox.thea.codes/en/stable/) sessions for automation tasks. You can use these sessions to perform various tasks such as linting, testing, type-checking, and building documentation.
+
+To run Nox sessions, make sure you have [Nox](https://nox.thea.codes/en/stable/) installed. Then, execute the desired session by running the following command in your terminal:
+
+```bash
+nox -s session_name
+```
+
+### Available Sessions
+
+- `typeguard`: Runtime type checking using Typeguard.
+- `mypy`: Type-check using mypy.
+- `tests`: Run the test suite.
+- `lint`: Lint using flake8.
+- `black`: Run black code formatter.
+- `safety`: Scan dependencies for insecure packages.
+- `pytype`: Type-check using pytype.
+- `xdoctest`: Run examples with xdoctest.
+- `docs`: Build the documentation.
+
+For example, to run linting, execute:
+
+```bash
+nox -s lint
