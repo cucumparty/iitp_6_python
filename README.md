@@ -40,12 +40,15 @@ hough_lines.show_hough_line(img, accumulator, thetas, rhos)
 from iitp_6_python import hough_lines
 import numpy as np
 import imageio
+import matplotlib.pyplot as plt
 
 # Load an image
 img = imageio.imread("path/to/your/image.jpg")
 
-# Detect lines in the image
-accumulator, thetas, rhos = hough_lines.hough_line(img)
+# Detect and draw lines on the image
+result_image = hough_lines.detect_and_draw_lines(img)
 
-# Display the original image and its Hough transform
-hough_lines.show_hough_line(img, accumulator, thetas, rhos)
+# Display the result image
+plt.imshow(result_image, cmap='gray')
+plt.axis('off')
+plt.show()
