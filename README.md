@@ -52,6 +52,7 @@ result_image = hough_lines.detect_and_draw_lines(img)
 plt.imshow(result_image, cmap='gray')
 plt.axis('off')
 plt.show()
+```
 
 ## Documentation
 
